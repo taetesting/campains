@@ -1,0 +1,4 @@
+#Deny Hotlink
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^$	 [NC]
+RewriteRule ^(.*)\.(jdk|jpg|png|jpeg|pdf|bmp|mp3|rar)$ /404.php?$1.$2   [R, NC]
